@@ -1,0 +1,618 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #ff4d4d;
+    --secondary-color: #333;
+    --accent-color: #ffd700;
+    --background-light: #f5f5f5;
+    --text-dark: #222;
+    --text-light: #666;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--background-light);
+}
+
+/* Header and Navigation */
+.Navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    transition: var(--transition);
+    transform: scale(2.5);
+}
+
+.logo img:hover {
+    transform: scale(2.55);
+}
+
+.logo-text a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 2px 0;
+    transition: all 0.3s ease;
+}
+
+.list-styling ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.list-styling ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: var(--transition);
+}
+
+.list-styling ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.list-styling ul li a:hover {
+    color: var(--primary-color);
+}
+
+.list-styling ul li a:hover::after {
+    width: 100%;
+}
+
+/* Call Action Section */
+.callaction {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.callaction img {
+    height: 24px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.callaction img:hover {
+    transform: scale(1.15);
+}
+
+/* Search Tab */
+.small-search-tab {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.small-search-tab form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.small-search-tab input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 0.9rem;
+}
+
+.small-search-tab button {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.small-search-tab button:hover {
+    background: var(--secondary-color);
+}
+
+/* Home Section */
+.home {
+    margin-top: 80px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home h3 {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.home h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.home button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.home button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Cards Section */
+.cards-for-fast-food {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cards-for-fast-food h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cards-for-fast-food h1 {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cards-for-fast-food p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.cards {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    padding: 1rem;
+}
+
+.cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cards img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.cards div:last-child {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+/* Food Delivery Section */
+.Food-Delivery {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.Food-Delivery h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.Food-Delivery h1 {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.Food-Delivery p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* .cards-section-2 */
+.cards-section-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-58{
+    width: 30vw;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+#box-58:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+#box-58 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#box-58:last-child {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+
+/* Theme Features Section */
+.Theme-Features {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cards-section-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.cards- {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.cards-:hover {
+    transform: translateY(-5px);
+}
+
+.cards- img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.cards- h1 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cards- p {
+    color: var(--text-light);
+}
+
+/* Call Us Section */
+.call-us-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.call-us-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.call-us-section h1 {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.call-us-section img {
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem 0;
+}
+
+/* Footer */
+.footerwebsite {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* CSS Updates */
+.Food-Delivery .item-price,
+.Food-Delivery .add-to-cart-btn {
+    display: none;
+}
+
+/* Enhanced Responsive Design */
+@media screen and (max-width: 1200px) {
+    .cards-section {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .Theme-Features .cards-section-3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .Navigation-bar {
+        padding: 1rem 3%;
+    }
+    
+    .list-styling ul {
+        gap: 1.5rem;
+    }
+    
+    .home {
+        padding: 3rem 1.5rem;
+    }
+    
+    .cards-section,
+    .cards-section-3 {
+        padding: 2rem 3%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Navigation-bar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .list-styling {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .list-styling ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .callaction {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cart-content {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .home {
+        margin-top: 160px;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .cards-for-fast-food h1,
+    .Food-Delivery h1,
+    .Theme-Features h1 {
+        font-size: 2rem;
+    }
+
+    .cards-section,
+    .cards-section-3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .list-styling {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        padding: 1rem;
+    }
+
+    .list-styling.active {
+        display: block;
+    }
+
+    .list-styling ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .list-styling ul li {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .Navigation-bar {
+        position: relative;
+        padding: 1rem;
+    }
+
+    .logo {
+        z-index: 1001;
+    }
+
+    .Navigation-bar {
+        padding: 0.8rem;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .logo-text a {
+        font-size: 1.2rem;
+    }
+
+    .home {
+        margin-top: 140px;
+        padding: 2rem 1rem;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home h3 {
+        font-size: 1rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .home button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .cards-section,
+    .cards-section-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .cards img {
+        height: 180px;
+    }
+
+    .cart-content {
+        min-width: 90%;
+        max-width: 95%;
+    }
+
+    .small-search-tab {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #box-58{
+        width: 90vw;
+    }
+}
