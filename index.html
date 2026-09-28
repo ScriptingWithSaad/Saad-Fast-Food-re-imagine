@@ -1,410 +1,544 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saadfastfood.com |online meal</title>
-    <link rel="stylesheet" href="./stylesheet/style.css">
-    
-    <!-- link favicon -->
-    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-
-    <!-- fonts for header | font for home section -->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap" rel="stylesheet">
-    
-</head>
-
-<body>
-    <header class="Navigation-bar">
-
-        <!-- logo and image -->
-
-        <div class="logo"><img src="./assets/images/Saad_fast_food-removebg-preview (1).png" alt="saad fast food logo">
-            <div class="logo-text"><a href="#">Saad Fast Food</a></div>
-        </div>
-
-        <!-- list-styling -->
-
-        <div class="list-styling">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PAGES</a></li>
-                <li><a href="#">OUR OFFER</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">SHOP</a></li>
-            </ul>
-        </div>
-
-        <!-- call action button -->
-
-        <div class="callaction">
-            <a href="https://www.facebook.com/profile.php?id=100029634032345" target="_blank">
-                <img src="./assets/images/facebook.png" alt="Facebook">
-            </a>
-
-            <a href="https://www.instagram.com/scriptingwithsaad/" target="_blank">
-                <img src="./assets/images/intagram.png" alt="Instagram">
-            </a>
-
-            <a class="twittericon" href="https://twitter.com/" target="_blank">
-                <img src="./assets/images/twitterx.png" alt="Twitter">
-            </a>
-
-            <a href="#" id="searchIcon">
-                <img src="./assets/images/searchIcon.png" alt="Search">
-            </a>
-        </div>
-
-        <!-- Small search tab (initially hidden) -->
-        <div class="small-search-tab" id="smallSearchTab" style="display: none;">
-            <form action="noaction.php" method="GET">
-                <input type="text" name="q" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#c52b24" />
+    <meta
+      name="description"
+      content="Discover burgers, pizza, shakes and sweet treats at Saad Fast Food. Browse a short menu full of flavour and build your favourites."
+    />
+    <title>Saad Fast Food — Big cravings. Bigger bites.</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <script type="module" src="script/script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Saad Fast Food home"
+          ><img
+            src="assets/optimized/chef.webp"
+            width="48"
+            height="54"
+            alt=""
+          /><span>Saad<span class="brand-small">Fast Food</span></span></a
+        >
+        <nav aria-label="Main navigation">
+          <a href="#menu">The menu</a><a href="#contact">Get in touch</a>
+        </nav>
+        <button
+          class="bag-button"
+          id="open-bag"
+          type="button"
+          aria-haspopup="dialog"
+          hidden
+        >
+          <svg
+            width="19"
+            height="21"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M5 7h14l1 14H4L5 7Z" />
+            <path d="M8 8V5a4 4 0 0 1 8 0v3" />
+          </svg>
+          <span>Your bag</span><span id="bag-count">0</span>
+        </button>
+      </div>
     </header>
-
-
-    <!-- home-section -->
-
-    <section class="home">
-        <div>
-            <h3>BOLD THEMES</h3>
+    <main id="main">
+      <section class="hero container" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-intro">
+            <span aria-hidden="true">✳</span> Cravings, meet your match.
+          </p>
+          <h1 id="hero-title">Big cravings.<br />Bigger bites.</h1>
+          <p class="hero-description">
+            Burgers that hit the spot. Pizza worth sharing. Shakes to top it all
+            off. Find your next favourite at Saad Fast Food.
+          </p>
+          <a class="button primary" href="#menu"
+            >Explore the menu <span aria-hidden="true">↗</span></a
+          >
+          <p class="hero-note">Something savoury. Something sweet. All here.</p>
         </div>
-        <div>
-            <h1>Online Fast Food Resturant</h1>
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="assets/optimized/hero-960.webp"
+            srcset="
+              assets/optimized/hero-480.webp 480w,
+              assets/optimized/hero-960.webp 960w
+            "
+            sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) 46vw, 550px"
+            width="960"
+            height="960"
+            fetchpriority="high"
+            alt="Cheeseburger stacked with melted cheese, served with fries"
+          />
+          <div class="hero-stamp" aria-hidden="true">
+            Go on.<br />Take a bite.
+          </div>
+          <div class="photo-caption">
+            <span>The cheeseburger</span><span>$10.99</span>
+          </div>
         </div>
-        <div>
-            <a href="#">
-                <button>
-                    View Samples
+      </section>
+      <div class="flavour-strip" aria-hidden="true">
+        <span>Big on flavour</span><span>✳</span><span>Made for cravings</span
+        ><span>✳</span><span>Good to the last bite</span>
+      </div>
+      <section
+        class="menu-section container"
+        id="menu"
+        aria-labelledby="menu-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">The menu</p>
+            <h2 id="menu-title">The good stuff.</h2>
+            <p>Eight favourites. One delicious decision.</p>
+          </div>
+          <div class="search-wrap" id="search-wrap" hidden>
+            <label for="menu-search">Find your favourite</label
+            ><input
+              id="menu-search"
+              type="search"
+              placeholder="Search the menu"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="menu-toolbar" id="menu-toolbar" hidden>
+          <div
+            class="filters"
+            role="group"
+            aria-label="Filter menu by category"
+          >
+            <button type="button" data-filter="All" aria-pressed="true">
+              All <span>8</span></button
+            ><button type="button" data-filter="Burgers" aria-pressed="false">
+              Burgers</button
+            ><button type="button" data-filter="Mains" aria-pressed="false">
+              Mains</button
+            ><button
+              type="button"
+              data-filter="Sweet treats"
+              aria-pressed="false"
+            >
+              Sweet treats
+            </button>
+          </div>
+          <p class="result-count" id="result-count" role="status">8 items</p>
+        </div>
+        <div class="product-grid" id="product-grid">
+          <article
+            class="product"
+            data-id="classic-burger"
+            data-category="Burgers"
+          >
+            <div class="product-photo">
+              <img
+                src="assets/optimized/classic-burger-320.webp"
+                srcset="
+                  assets/optimized/classic-burger-320.webp 320w,
+                  assets/optimized/classic-burger-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Classic burger"
+              />
+            </div>
+            <div class="product-body">
+              <p class="product-category">Burgers</p>
+              <h3>Classic burger</h3>
+              <p class="product-description">
+                The original, with all the good stuff.
+              </p>
+              <div class="product-bottom">
+                <span class="price">$9.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="classic-burger"
+                  aria-label="Add classic burger to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
                 </button>
-            </a>
-        </div>
-    </section>
-
-
-    <!-- section:cards for fast food -->
-
-
-    <div>
-        <div class="cards-for-fast-food">
-
-            <div>
-                <h3>TASTY & CRUNCHY</h3>
+              </div>
             </div>
-            <div>
-                <h1>Choose & enjoy</h1>
+          </article>
+          <article
+            class="product"
+            data-id="cheeseburger"
+            data-category="Burgers"
+          >
+            <div class="product-photo">
+              <img
+                src="assets/optimized/cheeseburger-320.webp"
+                srcset="
+                  assets/optimized/cheeseburger-320.webp 320w,
+                  assets/optimized/cheeseburger-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Cheeseburger"
+              />
             </div>
-            <div>
-                <p>Explore our menu to find your favorite fast food items. From burgers to pizzas, we have something for
-                    everyone!</p>
+            <div class="product-body">
+              <p class="product-category">Burgers</p>
+              <h3>Cheeseburger</h3>
+              <p class="product-description">For the love of melted cheese.</p>
+              <div class="product-bottom">
+                <span class="price">$10.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="cheeseburger"
+                  aria-label="Add cheeseburger to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="cards-section">
-
-        <div class="cards" id="box-1">
-            <div><img src="./assets/images/burger.png" alt="burger"></div>
-            <div>Burger</div>
-        </div>
-        <div class="cards" id="box-2">
-            <div><img src="./assets/images/Cheeseburger 1.png" alt="Cheeseburger"></div>
-            <div>Cheese burger</div>
-        </div>
-        <div class="cards" id="box-3">
-            <div><img src="./assets/images/Cheeseburger.png" alt="Cheeseburger"></div>
-            <div>Cheeseburger</div>
-        </div>
-        <div class="cards" id="box-4">
-            <div><img src="./assets/images/hambrger 2.png" alt="hamburger"></div>
-            <div>Hamburger</div>
-        </div>
-        <div class="cards" id="box-5">
-            <div><img src="./assets/images/hamburger 2.png" alt="hamburger"></div>
-            <div>hamburger</div>
-        </div>
-        <div class="cards" id="box-6">
-            <div><img src="./assets/images/Pizza.png" alt="Pizza"></div>
-            <div>Pizza</div>
-        </div>
-        <div class="cards" id="box-7">
-            <div><img src="./assets/images/Pizza 1.png" alt="Pizza"></div>
-            <div>Pizza</div>
-        </div>
-        <div class="cards" id="box-8">
-            <div><img src="./assets/images/cheeze pizza.png" alt="cheeze pizza"></div>
-            <div>cheeze pizza</div>
-        </div>
-        <div class="cards" id="box-9">
-            <div><img src="./assets/images/Hot dog 1.png" alt="Hot dog"></div>
-            <div>Hot dog</div>
-        </div>
-        <div class="cards" id="box-10">
-            <div><img src="./assets/images/Hot dog.png" alt="Hot dog"></div>
-            <div>Hot dog</div>
-        </div>
-        <div class="cards" id="box-11">
-            <div><img src="./assets/images/roast chicken.png" alt="roast chicken"></div>
-            <div>roast chicken</div>
-        </div>
-        <div class="cards" id="box-12">
-            <div><img src="./assets/images/roast chicken1.png" alt="roast chicken"></div>
-            <div>roast chicken</div>
-        </div>
-        <div class="cards" id="box-27">
-            <div><img src="./assets/images/Burrito 1.png" alt="Burrito"></div>
-            <div>Burrito</div>
-        </div>
-        <div class="cards" id="box-28">
-            <div><img src="./assets/images/barbeque.png" alt="barbeque"></div>
-            <div>barbeque</div>
-        </div>
-        <div class="cards" id="box-29">
-            <div><img src="./assets/images/Muffin.png" alt="Muffin"></div>
-            <div>Muffin</div>
-        </div>
-        <div class="cards" id="box-30">
-            <div><img src="./assets/images/Muffin cakes.png" alt="Muffin cake"></div>
-            <div>Muffin cake</div>
-        </div>
-        <div class="cards" id="box-31">
-            <div><img src="./assets/images/Muffin cake.png" alt="Muffin cake"></div>
-            <div>Muffin cake</div>
-        </div>
-        <div class="cards" id="box-32">
-            <div><img src="./assets/images/Pancake.png" alt="Pancake"></div>
-            <div>Pancake</div>
-        </div>
-        <div class="cards" id="box-33">
-            <div><img src="./assets/images/Pancake 1.png" alt="Pancake"></div>
-            <div>Pancake</div>
-        </div>
-        <div class="cards" id="box-34">
-            <div><img src="./assets/images/Pancake 2.png" alt="Pancake"></div>
-            <div>Pancake</div>
-        </div>
-        <div class="cards" id="box-40">
-            <div><img src="./assets/images/all 1 milkshakes.png" alt="milkshakes"></div>
-            <div>milkshakes</div>
-        </div>
-        <div class="cards" id="box-41">
-            <div><img src="./assets/images/choclate Milkshake.png" alt="choclate Milkshake"></div>
-            <div>choclate Milkshake</div>
-        </div>
-        <div class="cards" id="box-42">
-            <div><img src="./assets/images/stawberry Milkshake.png" alt="stawberry Milkshake"></div>
-            <div>stawberry Milkshake</div>
-        </div>
-        <div class="cards" id="box-43">
-            <div><img src="./assets/images/strawberry 2 Milkshake.png" alt="stawberry Milkshake"></div>
-            <div>stawberry Milkshake</div>
-        </div>
-        <div class="cards" id="box-44">
-            <div><img src="./assets/images/choclate 2 Milkshake.png" alt="choclate Milkshake"></div>
-            <div>choclate Milkshake</div>
-        </div>
-        <div class="cards" id="box-45">
-            <div><img src="./assets/images/cocala.png" alt="cocala"></div>
-            <div>cocala</div>
-        </div>
-    </div>
-
-    <!-- Food Delivery -->
-
-    <section class="Food-Delivery">
-        <div>
-            <h3>Delivery Time</h3>
-        </div>
-        <div>
-            <h1>Our Delivery</h1>
-        </div>
-        <div>
-            <p>"Fast, reliable delivery straight to your door – satisfaction guaranteed!"</p>
-        </div>
-    </section>
-
-    <div class="cards-section-2">
-
-        <div id="box-58">
-            <div><img src="./assets/images/Saad fast food delivery.png" alt="delivery"></div>
-            <div>
-                <h1>Saad fast food delivery</h1>
+          </article>
+          <article class="product" data-id="pizza" data-category="Mains">
+            <div class="product-photo">
+              <img
+                src="assets/optimized/pizza-320.webp"
+                srcset="
+                  assets/optimized/pizza-320.webp 320w,
+                  assets/optimized/pizza-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Cheese pizza"
+              />
             </div>
-            <div>
-                <p>"Efficient delivery at your doorstep, guaranteed by our dedicated delivery team."</p>
+            <div class="product-body">
+              <p class="product-category">Mains</p>
+              <h3>Cheese pizza</h3>
+              <p class="product-description">A slice worth slowing down for.</p>
+              <div class="product-bottom">
+                <span class="price">$12.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="pizza"
+                  aria-label="Add cheese pizza to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
             </div>
+          </article>
+          <article class="product" data-id="hot-dog" data-category="Mains">
+            <div class="product-photo">
+              <img
+                src="assets/optimized/hot-dog-320.webp"
+                srcset="
+                  assets/optimized/hot-dog-320.webp 320w,
+                  assets/optimized/hot-dog-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Hot dog"
+              />
+            </div>
+            <div class="product-body">
+              <p class="product-category">Mains</p>
+              <h3>Hot dog</h3>
+              <p class="product-description">A classic for a quick bite.</p>
+              <div class="product-bottom">
+                <span class="price">$5.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="hot-dog"
+                  aria-label="Add hot dog to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-id="roast-chicken"
+            data-category="Mains"
+          >
+            <div class="product-photo">
+              <img
+                src="assets/optimized/roast-chicken-320.webp"
+                srcset="
+                  assets/optimized/roast-chicken-320.webp 320w,
+                  assets/optimized/roast-chicken-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Roast chicken"
+              />
+            </div>
+            <div class="product-body">
+              <p class="product-category">Mains</p>
+              <h3>Roast chicken</h3>
+              <p class="product-description">Make a meal of it.</p>
+              <div class="product-bottom">
+                <span class="price">$15.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="roast-chicken"
+                  aria-label="Add roast chicken to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-id="chocolate-muffin"
+            data-category="Sweet treats"
+          >
+            <div class="product-photo">
+              <img
+                src="assets/optimized/chocolate-muffin-320.webp"
+                srcset="
+                  assets/optimized/chocolate-muffin-320.webp 320w,
+                  assets/optimized/chocolate-muffin-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Chocolate muffin"
+              />
+            </div>
+            <div class="product-body">
+              <p class="product-category">Sweet treats</p>
+              <h3>Chocolate muffin</h3>
+              <p class="product-description">
+                A little something for your sweet tooth.
+              </p>
+              <div class="product-bottom">
+                <span class="price">$3.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="chocolate-muffin"
+                  aria-label="Add chocolate muffin to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-id="chocolate-shake"
+            data-category="Sweet treats"
+          >
+            <div class="product-photo">
+              <img
+                src="assets/optimized/chocolate-shake-320.webp"
+                srcset="
+                  assets/optimized/chocolate-shake-320.webp 320w,
+                  assets/optimized/chocolate-shake-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Chocolate shake"
+              />
+            </div>
+            <div class="product-body">
+              <p class="product-category">Sweet treats</p>
+              <h3>Chocolate shake</h3>
+              <p class="product-description">Your chocolate fix, by the sip.</p>
+              <div class="product-bottom">
+                <span class="price">$6.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="chocolate-shake"
+                  aria-label="Add chocolate shake to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-id="strawberry-shake"
+            data-category="Sweet treats"
+          >
+            <div class="product-photo">
+              <img
+                src="assets/optimized/strawberry-shake-320.webp"
+                srcset="
+                  assets/optimized/strawberry-shake-320.webp 320w,
+                  assets/optimized/strawberry-shake-640.webp 640w
+                "
+                sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 900px) calc((100vw - 64px) / 2), 280px"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Strawberry shake"
+              />
+            </div>
+            <div class="product-body">
+              <p class="product-category">Sweet treats</p>
+              <h3>Strawberry shake</h3>
+              <p class="product-description">
+                A sweet finish to your favourites.
+              </p>
+              <div class="product-bottom">
+                <span class="price">$6.99</span
+                ><button
+                  class="add-button"
+                  type="button"
+                  data-add="strawberry-shake"
+                  aria-label="Add strawberry shake to bag"
+                  hidden
+                >
+                  Add <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
-    </div>
-
-    <!-- Theme Features -->
-
-    <section class="Theme-Features">
-        <div>
-            <h3>LEARN MORE</h3>
+        <div class="empty-results" id="empty-results" hidden>
+          <h3>No bites found.</h3>
+          <p>Try a different search or explore the full menu.</p>
+          <button class="button secondary" id="reset-filters" type="button">
+            Show all items
+          </button>
         </div>
-        <div>
-            <h1>Theme Features</h1>
-        </div>
-        <div>
-            <p>Fast Food is a exclusively built for restaurant, bar, caffe & tavern websites. It is fully responsive,
-                retina ready and easy to customize.</p>
-        </div>
-    </section>
-
-    <div class="cards-section-3">
-
-        <div class="cards-" id="box-46">
-            <div><img src="./assets/images/restaurant.png" alt="menu"></div>
-            <div>
-                <h1>Show your menu</h1>
-            </div>
-            <div>
-                <p>Fast Food comes with an options panel that lets you control every single part of the theme.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-47">
-            <div><img src="./assets/images/calendar.png" alt="calendar"></div>
-            <div>
-                <h1>OpenTable reservations</h1>
-            </div>
-            <div>
-                <p>Fast Food comes with OpenTable compatibility and ready to use booking form examples.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-48">
-            <div><img src="./assets/images/alarm-clock.png" alt="alarm-clock"></div>
-            <div>
-                <h1>Quick import</h1>
-            </div>
-            <div>
-                <p>Import the full Fast Food demo content with a single mouse click.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-49">
-            <div><img src="./assets/images/main-dish.png" alt="main-dish"></div>
-            <div>
-                <h1>For food business</h1>
-            </div>
-            <div>
-                <p>Since tailored for food business you will find it packed with carefully selected features.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-50">
-            <div><img src="./assets/images/graphic-design.png" alt="graphic"></div>
-            <div>
-                <h1>Awesome graphics</h1>
-            </div>
-            <div>
-                <p>With ready to use demo homepages and examples you can add as many pages as you want.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-51">
-            <div><img src="./assets/images/favorites.png" alt="favorites"></div>
-            <div>
-                <h1>Easy to use</h1>
-            </div>
-            <div>
-                <p>With carefully crafted elements you can add as many portfolio items or pages as you want.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-52">
-            <div><img src="./assets/images/color.png" alt="color"></div>
-            <div>
-                <h1>Typography & colors</h1>
-            </div>
-            <div>
-                <p>Use 500+ Google fonts, custom icons and fine color controls to customize the theme.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-53">
-            <div><img src="./assets/images/layout.png" alt="layout"></div>
-            <div>
-                <h1>Layout options</h1>
-            </div>
-            <div>
-                <p>Fast Food comes with an options panel that lets you control every single part of the theme.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-54">
-            <div><img src="./assets/images/globe-earth.png" alt="earth"></div>
-            <div>
-                <h1>Translation Ready</h1>
-            </div>
-            <div>
-                <p>Our theme is created with best translation practices in mind and already contains language file.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-55">
-            <div><img src="./assets/images/responsive.png" alt="responsive"></div>
-            <div>
-                <h1>Fully responsive</h1>
-            </div>
-            <div>
-                <p>Whatever you are using the device your site will run as it should be, theme has fully responsive
-                    layout.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-56">
-            <div><img src="./assets/images/settings.png" alt="settings"></div>
-            <div>
-                <h1>Native customizer</h1>
-            </div>
-            <div>
-                <p>Fast Food theme options panel is powered by native WordPress Customizer.</p>
-            </div>
-        </div>
-        <div class="cards-" id="box-57">
-            <div><img src="./assets/images/abc-block.png" alt="abc-block"></div>
-            <div>
-                <h1>Child Themes</h1>
-            </div>
-            <div>
-                <p>All of the functions have been setup so that they can be easily overwritten by a child theme.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- call-us-section -->
-    <section class="call-us-section">
-        <div>
-            <h3>
-                CALL US
-            </h3>
-            <h1>
-                +1-202-555-016
-            </h1>
-
-        </div>
-        <div><img src="./assets/images/clock.png" alt="clock"></div>
-        <div>
-            <p>mon-thu: 11.00 – 23.00
-                <br>
-                sat: 12.00 – 23.00
-                <br>
-                sun: 12.00 – 21.00
+        <p class="menu-note">
+          Prices in USD. Contact us to confirm availability and place your
+          order.
+        </p>
+        <noscript
+          ><p class="menu-note">
+            You can browse the full menu here. Enable JavaScript to filter items
+            and save a bag.
+          </p></noscript
+        >
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact-inner">
+          <div>
+            <p class="section-kicker">Stay hungry. Stay connected.</p>
+            <h2 id="contact-title">Let’s talk food.</h2>
+            <p>
+              Got your eye on something? Get in touch for availability and
+              ordering.
             </p>
-            <div><img src="./assets/images/location.png" alt="location"></div>
-            <p>60 East 65th Street
-                <br>
-                New York City
-                <br>
-                NY 10065
-            </p>
+          </div>
+          <div class="contact-links">
+            <a
+              class="button primary"
+              href="https://www.instagram.com/scriptingwithsaad/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Find us on Instagram <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              href="https://www.facebook.com/profile.php?id=100029634032345"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Follow on Facebook <span aria-hidden="true">↗</span></a
+            >
+          </div>
         </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="footerwebsite">
-        copyright &copy; WWW.Saadfastfood.com All right reserved!
+      </section>
+    </main>
+    <footer class="container footer">
+      <a class="footer-brand" href="#home"
+        >Saad Fast Food<span aria-hidden="true">.</span></a
+      >
+      <p>Good food. Good mood.</p>
+      <p>© Saad Fast Food</p>
     </footer>
-
-
-    <script src="script/script.js"></script>
-
-</body>
-
+    <dialog id="bag-dialog" aria-labelledby="bag-title">
+      <div class="bag-heading">
+        <div>
+          <p class="section-kicker">Something delicious</p>
+          <h2 id="bag-title">Your bag</h2>
+        </div>
+        <button
+          class="icon-button"
+          id="close-bag"
+          aria-label="Close bag"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div id="bag-items"></div>
+      <div class="bag-summary" id="bag-summary" hidden>
+        <div class="bag-subtotal">
+          <span>Subtotal</span><strong id="bag-total" aria-live="polite">$0.00</strong>
+        </div>
+        <p class="bag-help">
+          This is your saved selection, not a placed order. Contact us to
+          confirm prices, availability and delivery.
+        </p>
+        <a
+          class="button primary"
+          href="https://www.instagram.com/scriptingwithsaad/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Contact us to order <span aria-hidden="true">↗</span></a
+        ><button class="text-link clear-bag" id="clear-bag" type="button">
+          Clear bag
+        </button>
+      </div>
+      <button
+        class="button secondary continue-button"
+        id="continue-browsing"
+        type="button"
+      >
+        Keep exploring
+      </button>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
-
